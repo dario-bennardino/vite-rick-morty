@@ -1,5 +1,5 @@
 <script>
-import Main from './components/Main.vue';
+import Main from './components/Main.vue'
 export default {
         components:{
           Main
@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-   <Main/>
+   <Main />
 
 </template>
 
