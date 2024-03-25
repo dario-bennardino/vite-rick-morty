@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 import Main from './components/Main.vue'
 export default {
         components:{
@@ -8,6 +9,14 @@ export default {
           return{
 
           }
+        },
+        methods:{
+          getApi(){
+            console.log('get api');
+          }
+        },
+        mounted(){
+          this.getApi()
         }
     }
   
