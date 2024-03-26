@@ -16,8 +16,8 @@
                 <img :src="image" class="card-img-top" :alt="name">
                 <div class="card-body">
                     <h5 class="card-text">{{name}}</h5>
-                    <h5 class="card-text">{{status}}</h5>
-                    <h5 class="card-text">{{species}}</h5>
+                    <h6 class="card-text">{{status}}</h6>
+                    <h6 class="card-text">{{species}}</h6>
                 </div>
             </div>
     </div> 
