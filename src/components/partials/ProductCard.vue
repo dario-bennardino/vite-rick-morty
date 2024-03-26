@@ -10,14 +10,17 @@
 </script>
 
 <template>
+
     <div class="col">
-        <div class="card">
-            <img :src="image" class="card-img-top" alt="name">
-            <div class="card-body">
-                This is some text within a card body.
+            <div class="card" style="width: 18rem;">
+                <img :src="image" class="card-img-top" :alt="name">
+                <div class="card-body">
+                    <h5 class="card-text">nome</h5>
+                    <h5 class="card-text">status</h5>
+                    <h5 class="card-text">specie</h5>
+                </div>
             </div>
-        </div>    
-    </div>
+    </div> 
     
 
 </template>
