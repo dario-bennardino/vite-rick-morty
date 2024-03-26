@@ -3,10 +3,12 @@ import axios from 'axios';
 import { store } from './data/store'
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
+import SearchBar from './components/partials/SearchBar.vue';
 export default {
         components:{
           Header,
-          Main
+          Main,
+          SearchBar
           
         },
         data(){
@@ -28,7 +30,6 @@ export default {
             })
             .then(result => {
               
-              // this.store.cardsList = result.data.data;
               console.log(result.data.results);
               this.store.cardList = result.data.results;
               console.log(this.store.cardList);
@@ -46,7 +47,9 @@ export default {
 </script>
 
 <template>
+  
   <Header />
+  <SearchBar />
   <Main />
 
 </template>
