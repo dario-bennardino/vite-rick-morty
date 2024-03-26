@@ -21,9 +21,9 @@ export default {
             console.log(this.store);
             axios.get(this.store.apiUrl, {
               params:{
-                num: 12,
-                offset: 0,
-                language: 'it'
+                count: 20,
+                pages: 0
+                
               }
             })
             .then(result => {

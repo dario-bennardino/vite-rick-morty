@@ -18,7 +18,7 @@ import ProductCard from './partials/ProductCard.vue';
 <template>
     <div class="text-center my-5 container">
 
-        <div class="row row-cols-4 ">
+        <div class="row row-cols-4">
             <!-- <ProductCard 
             v-for="card in this.store.cardsList" 
             :key="card.results.id"
@@ -27,12 +27,15 @@ import ProductCard from './partials/ProductCard.vue';
             :species="card.results.species"
             :image="card.results.origin.url"
             /> -->
+            <ProductCard 
+            v-for=" card in this.store.cardList"
+            :key="card.id"
+            :name="card.name"
+            :status="card.status"
+            :species="card.species"
+            :image="card.image"
+            />
 
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
 
     
         </div>
@@ -43,6 +46,8 @@ import ProductCard from './partials/ProductCard.vue';
 
 </template>
 
-<style lang="scss" scoped>
-   
+<style lang="scss">
+   .container{
+    margin: 0 auto;
+   }
 </style>
