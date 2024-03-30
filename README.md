@@ -8,4 +8,4 @@ Per i dati da stampare per ogni carta fare riferimento allo screenshot allegato
 Documentazione:
 https://rickandmortyapi.com/documentation
 ## svolgimento
-1. 
+1. II parte
