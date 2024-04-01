@@ -43,6 +43,7 @@ export default {
             .then(res => {
               console.log(res.data);
               // this.store.namesList = res.data.map(item => item.results.name);
+              //ottengo un array di stringhe
               this.store.namesList = res.data.results.map(character => character.name);
               console.log(this.store.namesList);
             })
