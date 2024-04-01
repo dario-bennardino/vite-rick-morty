@@ -3,13 +3,11 @@ import axios from 'axios';
 import { store } from './data/store'
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
-import SearchBar from './components/SearchBar.vue'
 
 export default {
         components:{
           Header,
           Main,
-          SearchBar,
         
           
         },
@@ -39,10 +37,20 @@ export default {
             .catch(error => {
               console.log(error);
             })
+          },
+          getAllNames(){
+            axios.get(this.store.nameUrl)
+            .then(res => {
+              console.log(res.data);
+              // this.store.namesList = res.data.map(item => item.results.name);
+              this.store.namesList = res.data.results.map(character => character.name);
+              console.log(this.store.namesList);
+            })
           }
         },
         mounted(){
           this.getApi()
+          this.getAllNames()
         }
     }
   
@@ -51,8 +59,6 @@ export default {
 <template>
   
   <Header />
-
-  <SearchBar/>
 
   <Main />
 
