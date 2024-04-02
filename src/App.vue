@@ -24,7 +24,8 @@ export default {
             axios.get(this.store.apiUrl, {
               params:{
                 count: 20,
-                pages: 0
+                pages: 0,
+                name: this.store.queryParams.name
                 
               }
             })
@@ -59,7 +60,7 @@ export default {
 
 <template>
   
-  <Header />
+  <Header @startSearch="getApi"/>
 
   <Main />
 

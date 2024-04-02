@@ -6,5 +6,11 @@ export const store = reactive({
     apiUrl: 'https://rickandmortyapi.com/api/character',
     nameUrl: 'https://rickandmortyapi.com/api/character?name',
     cardList: [],
-    namesList: []
+    namesList: [],
+    // character: ''
+    queryParams: {
+        num: 20,
+        offset: 0,
+
+    }
 })
